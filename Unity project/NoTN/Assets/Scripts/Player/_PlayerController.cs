@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(PlayerMotor))]
-public class PlayerController : MonoBehaviour {
+public class _PlayerController : MonoBehaviour {
 
     public float speed = 5f;
     private PlayerMotor motor;
