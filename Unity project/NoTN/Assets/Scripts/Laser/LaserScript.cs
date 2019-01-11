@@ -2,67 +2,60 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LaserScript : MonoBehaviour
-{
+public class LaserScript : MonoBehaviour {
     LineRenderer line;
+    public RaycastHit hit;
     // Use this for initialization
-    void Start()
-    {
-        line = GetComponent<LineRenderer>();
+    void Start () {
+        line = GetComponent<LineRenderer> ();
         line.enabled = false;
 
         //Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        Debug.Log(Input.GetKey(KeyCode.C));
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            StopCoroutine("FireLaser");
-            StartCoroutine("FireLaser");
+    void Update () {
+
+        Debug.Log (Input.GetKey (KeyCode.C));
+        if (Input.GetKeyDown (KeyCode.C)) {
+            StopCoroutine ("FireLaser");
+            StartCoroutine ("FireLaser");
         }
     }
 
-    IEnumerator FireLaser()
-    {
+    IEnumerator FireLaser () {
         line.enabled = true;
+        MirrorScript mirrorHolder = null;
 
-        while (Input.GetKey(KeyCode.C))
-        {
-            Ray ray = new Ray(transform.position, transform.forward);
-            RaycastHit hit;
-            List<Mirror> mirrorList = new List<Mirror>();
+        while (Input.GetKey (KeyCode.C)) {
+            Ray ray = new Ray (transform.position, transform.forward);
 
-            line.SetPosition(0, ray.origin);
+            line.SetPosition (0, ray.origin);
             // If the laser hits a surface (Collider) We let the laser end at the collision point. If not we let it go to the max range (100)
 
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity))
-            {
-                line.SetPosition(1, hit.point);
-                if (hit.transform.gameObject.layer == LayerMask.NameToLayer("Mirror"))
-                {
-                    if (mirrorList.Contains(hit.transform.GetComponent<Mirror>()))
-                    {
-                        line.positionCount = 1 + mirrorList.Count;
-
-                    }
-                    Debug.Log(line.positionCount);
-                    Vector3 pos = Vector3.Reflect(hit.point - this.transform.position, hit.normal);
-                    line.SetPosition(2, pos);
+            if (Physics.Raycast (ray, out hit, Mathf.Infinity)) {
+                if (hit.transform.gameObject.layer == LayerMask.NameToLayer ("Mirror")) {
+                    hit.transform.gameObject.GetComponent<MirrorScript> ().TriggerReflection (this.transform, hit);
+                    mirrorHolder = hit.transform.gameObject.GetComponent<MirrorScript> ();
+                } else {
+                    Debug.Log (mirrorHolder);
+                    if (mirrorHolder != null)
+                        mirrorHolder.line.enabled = false;
                 }
-                else
-                {
-                    line.positionCount = 2;
-                }
-            }
-            else
-            {
-                line.SetPosition(1, ray.GetPoint(100));
+                line.SetPosition (1, hit.point);
+            } else {
+                if (mirrorHolder != null)
+                    mirrorHolder.line.enabled = false;
+                line.SetPosition (1, ray.GetPoint (100));
             }
 
             yield return null;
+        }
+
+        Debug.Log (mirrorHolder);
+        if (mirrorHolder != null) {
+            mirrorHolder.line.enabled = false;
+            mirrorHolder = null;
         }
 
         line.enabled = false;
