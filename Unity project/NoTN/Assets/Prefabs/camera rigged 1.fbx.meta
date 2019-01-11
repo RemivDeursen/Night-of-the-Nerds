@@ -1,0 +1,316 @@
+fileFormatVersion: 2
+guid: 08047d55756bd9a4fb067189aac91ca4
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: armadura camera
+    100002: base
+    100004: base 1
+    100006: base cubo
+    100008: base_end
+    100010: borracha part frente
+    100012: cam part
+    100014: camera
+    100016: camera corp
+    100018: camera corp frente
+    100020: camera cubo
+    100022: camera part
+    100024: //RootNode
+    100026: camera_end
+    100028: Empty
+    100030: Empty.001
+    100032: Empty.002
+    100034: Empty.003
+    100036: lente
+    100038: lumem.001
+    100040: lumem.002
+    100042: lumem.003
+    100044: lumem.004
+    100046: lumem.005
+    100048: lumem.006
+    100050: lumem.007
+    100052: lumem.008
+    100054: lumem.009
+    100056: lumem.010
+    100058: lumem.011
+    100060: lumem.012
+    100062: lumem.013
+    100064: lumem.014
+    100066: lumem.015
+    100068: lumem.016
+    100070: lumem.017
+    100072: lumem.018
+    100074: lumem.019
+    100076: lumem.020
+    100078: lumem.021
+    100080: lumem.022
+    100082: lumem.023
+    100084: lumem.024
+    100086: lumem.025
+    100088: lumem.026
+    100090: lumem.027
+    100092: lumem.028
+    100094: lumem.029
+    100096: lumem.030
+    100098: lumem.031
+    100100: lumem.032
+    100102: lumem.033
+    100104: lumem.034
+    100106: lumem.035
+    100108: lumem.036
+    100110: parafuso
+    100112: parafuso 2
+    100114: parafuso 3
+    100116: parafuso.001
+    100118: porca
+    100120: porca 2
+    100122: rosca 2
+    100124: rosca part frente
+    100126: suporte
+    100128: suporte 1
+    100130: suporte cubo
+    100132: suporte_end
+    400000: armadura camera
+    400002: base
+    400004: base 1
+    400006: base cubo
+    400008: base_end
+    400010: borracha part frente
+    400012: cam part
+    400014: camera
+    400016: camera corp
+    400018: camera corp frente
+    400020: camera cubo
+    400022: camera part
+    400024: //RootNode
+    400026: camera_end
+    400028: Empty
+    400030: Empty.001
+    400032: Empty.002
+    400034: Empty.003
+    400036: lente
+    400038: lumem.001
+    400040: lumem.002
+    400042: lumem.003
+    400044: lumem.004
+    400046: lumem.005
+    400048: lumem.006
+    400050: lumem.007
+    400052: lumem.008
+    400054: lumem.009
+    400056: lumem.010
+    400058: lumem.011
+    400060: lumem.012
+    400062: lumem.013
+    400064: lumem.014
+    400066: lumem.015
+    400068: lumem.016
+    400070: lumem.017
+    400072: lumem.018
+    400074: lumem.019
+    400076: lumem.020
+    400078: lumem.021
+    400080: lumem.022
+    400082: lumem.023
+    400084: lumem.024
+    400086: lumem.025
+    400088: lumem.026
+    400090: lumem.027
+    400092: lumem.028
+    400094: lumem.029
+    400096: lumem.030
+    400098: lumem.031
+    400100: lumem.032
+    400102: lumem.033
+    400104: lumem.034
+    400106: lumem.035
+    400108: lumem.036
+    400110: parafuso
+    400112: parafuso 2
+    400114: parafuso 3
+    400116: parafuso.001
+    400118: porca
+    400120: porca 2
+    400122: rosca 2
+    400124: rosca part frente
+    400126: suporte
+    400128: suporte 1
+    400130: suporte cubo
+    400132: suporte_end
+    2100000: transparente
+    2100002: metal cabo
+    2100004: parafuso
+    2100006: camera
+    2100008: plastico preto
+    2100010: borracha
+    2100012: platico part cam
+    2100014: lente
+    2100016: part verde
+    2100018: lumens
+    2100020: plastico branco
+    2100022: vidro
+    2300000: base cubo
+    2300002: camera cubo
+    2300004: suporte cubo
+    3300000: base cubo
+    3300002: camera cubo
+    3300004: suporte cubo
+    4300000: base cubo
+    4300002: suporte cubo
+    4300004: camera cubo
+    4300006: rosca 2
+    4300008: porca
+    4300010: parafuso
+    4300012: base
+    4300014: parafuso 3
+    4300016: parafuso 2
+    4300018: suporte
+    4300020: lente
+    4300022: cam part
+    4300024: lumem.031
+    4300026: lumem.026
+    4300028: lumem.036
+    4300030: lumem.016
+    4300032: lumem.020
+    4300034: rosca part frente
+    4300036: borracha part frente
+    4300038: camera corp frente
+    4300040: camera part
+    4300042: camera corp
+    4300044: parafuso.001
+    4300046: porca 2
+    9500000: //RootNode
+    13700000: base
+    13700002: borracha part frente
+    13700004: cam part
+    13700006: camera corp
+    13700008: camera corp frente
+    13700010: camera part
+    13700012: lente
+    13700014: lumem.001
+    13700016: lumem.002
+    13700018: lumem.003
+    13700020: lumem.004
+    13700022: lumem.005
+    13700024: lumem.006
+    13700026: lumem.007
+    13700028: lumem.008
+    13700030: lumem.009
+    13700032: lumem.010
+    13700034: lumem.011
+    13700036: lumem.012
+    13700038: lumem.013
+    13700040: lumem.014
+    13700042: lumem.015
+    13700044: lumem.016
+    13700046: lumem.017
+    13700048: lumem.018
+    13700050: lumem.019
+    13700052: lumem.020
+    13700054: lumem.021
+    13700056: lumem.022
+    13700058: lumem.023
+    13700060: lumem.024
+    13700062: lumem.025
+    13700064: lumem.026
+    13700066: lumem.027
+    13700068: lumem.028
+    13700070: lumem.029
+    13700072: lumem.030
+    13700074: lumem.031
+    13700076: lumem.032
+    13700078: lumem.033
+    13700080: lumem.034
+    13700082: lumem.035
+    13700084: lumem.036
+    13700086: parafuso
+    13700088: parafuso 2
+    13700090: parafuso 3
+    13700092: parafuso.001
+    13700094: porca
+    13700096: porca 2
+    13700098: rosca 2
+    13700100: rosca part frente
+    13700102: suporte
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
