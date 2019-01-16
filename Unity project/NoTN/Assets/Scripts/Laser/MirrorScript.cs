@@ -13,7 +13,7 @@ public class MirrorScript : MonoBehaviour {
 	void Update () { }
 
 	public void TriggerReflection (Transform main, RaycastHit hit) {
-
+		Debug.Log("Trigger reflect");
 		StopCoroutine ("FireLaser");
 		StartCoroutine (FireLaser (main, hit));
 

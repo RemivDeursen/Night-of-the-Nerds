@@ -25,16 +25,17 @@ public class LaserScript : MonoBehaviour {
         line.enabled = true;
         MirrorScript mirrorHolder = null;
 
-        while (Input.GetKey (KeyCode.C)) {
+        while (!levelComplete) {
             Ray ray = new Ray (transform.position, transform.forward);
+            RaycastHit hit;
 
             line.SetPosition (0, ray.origin);
             // If the laser hits a surface (Collider) We let the laser end at the collision point. If not we let it go to the max range (100)
 
             if (Physics.Raycast (ray, out hit, Mathf.Infinity)) {
                 if (hit.transform.gameObject.layer == LayerMask.NameToLayer ("Mirror")) {
-                    hit.transform.gameObject.GetComponent<MirrorScript> ().TriggerReflection (this.transform, hit);
-                    mirrorHolder = hit.transform.gameObject.GetComponent<MirrorScript> ();
+                    hit.transform.GetComponentInChildren<MirrorScript> ().TriggerReflection (this.transform, hit);
+                    mirrorHolder = hit.transform.GetComponentInChildren<MirrorScript> ();
                 } else {
                     Debug.Log (mirrorHolder);
                     if (mirrorHolder != null)
