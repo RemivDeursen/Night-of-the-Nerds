@@ -5,11 +5,13 @@ using UnityEngine;
 public class LaserScript : MonoBehaviour
 {
     LineRenderer line;
+    public bool levelComplete = false;
     // Use this for initialization
     void Start()
     {
         line = GetComponent<LineRenderer>();
-        line.enabled = false;
+        line.enabled = true;
+        StartCoroutine("FireLaser");
 
         //Cursor.lockState = CursorLockMode.Locked;
     }
@@ -18,18 +20,13 @@ public class LaserScript : MonoBehaviour
     void Update()
     {
         Debug.Log(Input.GetKey(KeyCode.C));
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            StopCoroutine("FireLaser");
-            StartCoroutine("FireLaser");
-        }
     }
 
     IEnumerator FireLaser()
     {
         line.enabled = true;
 
-        while (Input.GetKey(KeyCode.C))
+        while (!levelComplete)
         {
             Ray ray = new Ray(transform.position, transform.forward);
             RaycastHit hit;
