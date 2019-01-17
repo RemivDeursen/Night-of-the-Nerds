@@ -20,6 +20,7 @@ public class Camera_ObjectiveHighlighter : MonoBehaviour {
 	void Start () {
 		highlightMatGood = (Material) Resources.Load ("VR_GoodItemHighlighter", typeof (Material));
 		highlightMatBad = (Material) Resources.Load ("VR_GoodItemHighlighter", typeof (Material));
+		CreateHighlightRenderers ();
 		if (highlightMatGood == null)
 			Debug.LogError ("Hover Highlight Material is missing. Please create a material named 'VR_GoodItemHighlighter' and place it in a Resources folder");
 		if (highlightMatBad == null)
@@ -30,11 +31,9 @@ public class Camera_ObjectiveHighlighter : MonoBehaviour {
 	void Update () {
 
 		if (attachedToHand == true) {
-			if (enableHighlight == false) {
-				CreateHighlightRenderers ();
+			if (enableHighlight == true) {
 				UpdateHighlightRenderers ();
 			}
-
 		}
 	}
 
