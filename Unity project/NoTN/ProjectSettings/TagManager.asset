@@ -6,6 +6,9 @@ TagManager:
   tags:
   - projectile
   - Mirror
+  - Enemy
+  - Projectile
+  - Camera
   layers:
   - Default
   - TransparentFX
@@ -20,7 +23,7 @@ TagManager:
   - Mirror
   - CamOnly
   - 
-  - 
+  - PointerGoal
   - 
   - 
   - 

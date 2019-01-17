@@ -31,8 +31,10 @@ public class MirrorScript : MonoBehaviour {
 		if (Physics.Raycast (ray, out hit, Mathf.Infinity)) {
 			if (hit.transform.gameObject.layer == LayerMask.NameToLayer ("Mirror")) {
 				Debug.Log("Second Mirror");
-				hit.transform.gameObject.GetComponent<MirrorScript> ().TriggerReflection (this.transform, hit);
-				mirrorHolder = hit.transform.gameObject.GetComponent<MirrorScript> ();
+				hit.transform.GetComponentInChildren<MirrorScript> ().TriggerReflection(this.transform, hit);
+				mirrorHolder = hit.transform.GetComponentInChildren<MirrorScript> ();
+			} else if (hit.transform.gameObject.layer == LayerMask.NameToLayer("PointerGoal")) {
+				hit.transform.gameObject.GetComponent<Renderer>().material.color = Color.green;
 			} else {
 				Debug.Log (mirrorHolder);
 				if (mirrorHolder != null)
