@@ -127,6 +127,7 @@ public class Camera_ObjectiveHighlighter : MonoBehaviour {
 				highlightRenderer.transform.localScale = existingRenderer.transform.lossyScale;
 				highlightRenderer.enabled = enableHighlight && existingRenderer.enabled && existingRenderer.gameObject.activeInHierarchy;
 			} else if (highlightRenderer != null)
+			//Problem is here
 				highlightRenderer.enabled = false;
 		}
 	}
