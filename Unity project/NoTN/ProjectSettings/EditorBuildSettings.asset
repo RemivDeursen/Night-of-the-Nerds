@@ -5,7 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Synch.unity
     guid: a6699109401931c4b95902f71cb3e01a
+  - enabled: 1
+    path: Assets/Scenes/PCcontrols.unity
+    guid: a24da28fd48f71348ae35d03235a12f2
   m_configObjects: {}
