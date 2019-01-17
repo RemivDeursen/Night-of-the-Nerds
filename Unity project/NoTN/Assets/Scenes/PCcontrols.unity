@@ -175,6 +175,48 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &844716981
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4850711016355874, guid: 817d82588ddd1b44f91735615b75d5bc, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 4850711016355874, guid: 817d82588ddd1b44f91735615b75d5bc, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4850711016355874, guid: 817d82588ddd1b44f91735615b75d5bc, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4850711016355874, guid: 817d82588ddd1b44f91735615b75d5bc, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4850711016355874, guid: 817d82588ddd1b44f91735615b75d5bc, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4850711016355874, guid: 817d82588ddd1b44f91735615b75d5bc, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4850711016355874, guid: 817d82588ddd1b44f91735615b75d5bc, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4850711016355874, guid: 817d82588ddd1b44f91735615b75d5bc, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 817d82588ddd1b44f91735615b75d5bc, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &1256075173
 GameObject:
   m_ObjectHideFlags: 0
@@ -310,7 +352,7 @@ MonoBehaviour:
   m_OfflineScene: 
   m_OnlineScene: 
   m_SpawnPrefabs:
-  - {fileID: 1335045051134622, guid: 817d82588ddd1b44f91735615b75d5bc, type: 2}
+  - {fileID: 1814572937004522, guid: 817d82588ddd1b44f91735615b75d5bc, type: 2}
   - {fileID: 1559739887235472, guid: 540399b9aeb03134a98cfa0faead16ae, type: 2}
   - {fileID: 1065092564587208, guid: a218936f8bb898544a156cff990ec4c9, type: 2}
   - {fileID: 1212005019397478, guid: d2cfcadbd1b875b40901193b7dcf4cc5, type: 2}

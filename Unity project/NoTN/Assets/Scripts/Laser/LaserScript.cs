@@ -18,7 +18,7 @@ public class LaserScript : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(Input.GetKey(KeyCode.C));
+        //Debug.Log(Input.GetKey(KeyCode.C));
     }
 
     IEnumerator FireLaser () {
