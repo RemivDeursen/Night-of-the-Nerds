@@ -5,10 +5,8 @@ using UnityEngine.Networking;
 
 public class CameraControll : NetworkBehaviour
 {
-    public Transform PlayerCameraPosition;
-    private bool _laserPointerOn;
-    private AudioSource _beepSound;
-    private LineRenderer _cameraLaser;
+    public GameObject[] Cameras;
+    public int CurrentControlledCamera;
 
     // Use this for initialization
     void Start()
@@ -17,11 +15,8 @@ public class CameraControll : NetworkBehaviour
         {
             return;
         }
-        Camera.main.transform.parent = PlayerCameraPosition;
-        Camera.main.transform.position = PlayerCameraPosition.position;
-        _laserPointerOn = false;
-        _beepSound = GetComponent<AudioSource>();
-        _cameraLaser = GetComponent<LineRenderer>();
+        CurrentControlledCamera = 3;
+        ControlNextCamera();
     }
 
     // Update is called once per frame
@@ -31,10 +26,11 @@ public class CameraControll : NetworkBehaviour
         {
             return;
         }
-        Vector3 _verticalTurn = new Vector3(-Input.GetAxis("Vertical"), 0, 0);
-        transform.Rotate(_verticalTurn);
+
+        Vector3 _verticalTurn = new Vector3(Input.GetAxis("Vertical"), 0, 0);
+        Cameras[CurrentControlledCamera].gameObject.transform.Rotate(_verticalTurn, Space.Self);
         Vector3 _horizontalTurn = new Vector3(0, Input.GetAxis("Horizontal"), 0);
-        transform.Rotate(_horizontalTurn, Space.World);
+        Cameras[CurrentControlledCamera].gameObject.transform.Rotate(_horizontalTurn, Space.World);
 
         if (Input.GetKeyDown(KeyCode.Q))
         {
@@ -44,19 +40,34 @@ public class CameraControll : NetworkBehaviour
         {
             CmdToggleLaserPointer();
         }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            ControlNextCamera();
+        }
+    }
+
+    public void ControlNextCamera()
+    {
+        if (Cameras[CurrentControlledCamera].GetComponent<CameraManager>()._laserPointerOn)
+            CmdToggleLaserPointer();
+        CurrentControlledCamera++;
+        if (CurrentControlledCamera > Cameras.Length - 1)
+            CurrentControlledCamera = 0;
+        Camera.main.transform.rotation = Quaternion.identity;
+        Camera.main.transform.parent = Cameras[CurrentControlledCamera].GetComponent<CameraManager>().PlayerCameraPosition;
+        Camera.main.transform.position = Cameras[CurrentControlledCamera].GetComponent<CameraManager>().PlayerCameraPosition.position;
+        Camera.main.transform.rotation = Cameras[CurrentControlledCamera].GetComponent<CameraManager>().PlayerCameraPosition.rotation;
     }
 
     [Command]
     void CmdMakeSound()
     {
-        if (!_beepSound.isPlaying)
-            _beepSound.Play();
+        Cameras[CurrentControlledCamera].GetComponent<CameraManager>().MakeSound();
     }
 
     [Command]
     void CmdToggleLaserPointer()
     {
-        _laserPointerOn = !_laserPointerOn;
-        _cameraLaser.enabled = _laserPointerOn;
+        Cameras[CurrentControlledCamera].GetComponent<CameraManager>().ToggleLaserPointer();
     }
 }
