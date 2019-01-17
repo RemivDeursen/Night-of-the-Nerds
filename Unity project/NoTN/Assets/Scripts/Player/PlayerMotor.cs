@@ -35,6 +35,11 @@ public class PlayerMotor : MonoBehaviour {
 
     public void CameraRotate(Vector3 _cameraRotation)
     {
+        //if(_cameraRotation >)
+        //{
+        //    Debug.Log("asd");
+        //    cameraRotation = new Vector3(80, 0, 0);
+        //}
         cameraRotation = _cameraRotation;
     }
 
@@ -57,6 +62,7 @@ public class PlayerMotor : MonoBehaviour {
         {
             cam.transform.Rotate(-cameraRotation);
         }
+
     }
 
   
