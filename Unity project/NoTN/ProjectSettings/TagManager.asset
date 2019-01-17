@@ -6,6 +6,9 @@ TagManager:
   tags:
   - projectile
   - Mirror
+  - Projectile
+  - Enemy
+  - Camera
   layers:
   - Default
   - TransparentFX
@@ -19,7 +22,7 @@ TagManager:
   - CanTeleport
   - Mirror
   - CamOnly
-  - 
+  - Table
   - 
   - 
   - 
