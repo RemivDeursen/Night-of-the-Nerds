@@ -52,7 +52,7 @@ public class EnemyController : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Camera")
         {
-            //Destroy camera
+            Destroy(this.gameObject);
             Debug.Log("Camera hit!");
         }
     }

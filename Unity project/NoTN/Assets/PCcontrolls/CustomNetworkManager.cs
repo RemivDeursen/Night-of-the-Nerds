@@ -6,7 +6,7 @@ using UnityEngine.Networking;
 public class CustomNetworkManager : NetworkManager
 {
     public Transform PlayerObjectsSpawnPoint;
-    private int _connectionCounter = 2;
+    private int _connectionCounter = 1;
 
     // Server callbacks
     public override void OnServerAddPlayer(NetworkConnection conn, short playerControllerId)
