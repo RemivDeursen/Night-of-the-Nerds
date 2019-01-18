@@ -13,7 +13,7 @@ public class MirrorScript : MonoBehaviour {
 	void Update () { }
 
 	public void TriggerReflection (Transform main, RaycastHit hit) {
-		Debug.Log("Trigger reflect");
+		//Debug.Log("Trigger reflect");
 		StopCoroutine ("FireLaser");
 		StartCoroutine (FireLaser (main, hit));
 
@@ -36,7 +36,7 @@ public class MirrorScript : MonoBehaviour {
 			} else if (hit.transform.gameObject.layer == LayerMask.NameToLayer("PointerGoal")) {
 				hit.transform.gameObject.GetComponent<Renderer>().material.color = Color.green;
 			} else {
-				Debug.Log (mirrorHolder);
+				//Debug.Log (mirrorHolder);
 				if (mirrorHolder != null)
 					mirrorHolder.line.enabled = false;
 			}
@@ -49,7 +49,7 @@ public class MirrorScript : MonoBehaviour {
 
 		yield return null;
 
-		Debug.Log (mirrorHolder);
+		//Debug.Log (mirrorHolder);
 		if (mirrorHolder != null) {
 			mirrorHolder.line.enabled = false;
 			mirrorHolder = null;

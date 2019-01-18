@@ -7,6 +7,9 @@ public class EnemyController : MonoBehaviour
     public GameObject _target;
     public GameObject[] _cameras;
 
+    public float MaxSpeed;
+    public float MinSpeed;
+
     // Use this for initialization
     void Start()
     {
@@ -20,7 +23,7 @@ public class EnemyController : MonoBehaviour
         if(_target != null)
         {
             transform.LookAt(_target.transform);
-            transform.position = Vector3.MoveTowards(transform.position, _target.transform.position, Time.deltaTime/5);
+            transform.position = Vector3.MoveTowards(transform.position, _target.transform.position, Time.deltaTime * Random.Range(MinSpeed, MaxSpeed));
         }
         else
         {

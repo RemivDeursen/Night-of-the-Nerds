@@ -267,3 +267,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _target: {fileID: 0}
   _cameras: []
+  MaxSpeed: 1
+  MinSpeed: 0.5

@@ -51,9 +51,9 @@ public class TurretController : NetworkBehaviour
     void CmdShootProjectile()
     {
         var projectile = Instantiate(Projectile, ProjectileSpawnLocation.position, ProjectileSpawnLocation.rotation);
-        projectile.GetComponent<Rigidbody>().velocity = -projectile.transform.forward * 35;
+        projectile.GetComponent<Rigidbody>().velocity = -projectile.transform.forward * 15;
         NetworkServer.Spawn(projectile);
-        Destroy(projectile, 4.0f);
+        Destroy(projectile, 3.0f);
     }
 
     [Command]

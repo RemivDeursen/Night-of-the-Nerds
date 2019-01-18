@@ -16,6 +16,7 @@ public class CustomNetworkManager : NetworkManager
             //Possibility for spectators;
             return;
         }
+        Debug.Log("Instantiating  prefab " + _connectionCounter);
         var player = (GameObject)GameObject.Instantiate(spawnPrefabs[_connectionCounter], PlayerObjectsSpawnPoint.position, Quaternion.identity);
         NetworkServer.AddPlayerForConnection(conn, player, playerControllerId);
         _connectionCounter++;
