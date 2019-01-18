@@ -596,7 +596,7 @@ MonoBehaviour:
   - {fileID: 4351627029808656}
   - {fileID: 4260879136946652}
   - {fileID: 4495001946414974}
-  ProjectileSpawnLocation: {fileID: 0}
+  ProjectileSpawnLocation: {fileID: 4142805555629440}
 --- !u!114 &114989898787742198
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -25,7 +25,7 @@ public class TurretController : NetworkBehaviour
         Camera.main.transform.parent = PlayerCameraPosition;
         Camera.main.transform.position = PlayerCameraPosition.position;
         Camera.main.transform.rotation = PlayerCameraPosition.rotation;
-       SpawningEnemies = true;
+        SpawningEnemies = true;
         StartCoroutine(EnemySpawnTimer());
     }
 
@@ -51,7 +51,7 @@ public class TurretController : NetworkBehaviour
     void CmdShootProjectile()
     {
         var projectile = Instantiate(Projectile, ProjectileSpawnLocation.position, ProjectileSpawnLocation.rotation);
-        projectile.GetComponent<Rigidbody>().velocity = -projectile.transform.forward * 50;
+        projectile.GetComponent<Rigidbody>().velocity = -projectile.transform.forward * 35;
         NetworkServer.Spawn(projectile);
         Destroy(projectile, 4.0f);
     }
@@ -59,7 +59,7 @@ public class TurretController : NetworkBehaviour
     [Command]
     void CmdSpawnEnemy()
     {
-        int randomInt = Random.Range(0, EnemySpawnLocations.Length-1);
+        int randomInt = Random.Range(0, EnemySpawnLocations.Length - 1);
         var enemy = Instantiate(EnemySpawnObject, EnemySpawnLocations[randomInt].position, EnemySpawnLocations[randomInt].rotation);
         NetworkServer.Spawn(enemy);
     }

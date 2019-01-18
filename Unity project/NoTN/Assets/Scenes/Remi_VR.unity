@@ -1394,7 +1394,6 @@ GameObject:
   - component: {fileID: 381192298}
   - component: {fileID: 381192297}
   - component: {fileID: 381192302}
-  - component: {fileID: 401560951}
   m_Layer: 10
   m_Name: Mirror
   m_TagString: Mirror
@@ -1532,7 +1531,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &478647564
 GameObject:
@@ -6362,6 +6361,52 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.08, y: 0.08000002, z: 0.916685}
   m_Center: {x: 0, y: 1.9018682e-11, z: -0.040842324}
+--- !u!1001 &1956120634
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4177504286194804, guid: 817d82588ddd1b44f91735615b75d5bc, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4177504286194804, guid: 817d82588ddd1b44f91735615b75d5bc, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4177504286194804, guid: 817d82588ddd1b44f91735615b75d5bc, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4177504286194804, guid: 817d82588ddd1b44f91735615b75d5bc, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4177504286194804, guid: 817d82588ddd1b44f91735615b75d5bc, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4177504286194804, guid: 817d82588ddd1b44f91735615b75d5bc, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4177504286194804, guid: 817d82588ddd1b44f91735615b75d5bc, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4177504286194804, guid: 817d82588ddd1b44f91735615b75d5bc, type: 2}
+      propertyPath: m_RootOrder
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1312921945353026, guid: 817d82588ddd1b44f91735615b75d5bc, type: 2}
+      propertyPath: m_Name
+      value: Camera (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 817d82588ddd1b44f91735615b75d5bc, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &1986383862
 GameObject:
   m_ObjectHideFlags: 0

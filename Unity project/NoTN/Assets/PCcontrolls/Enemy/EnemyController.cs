@@ -5,11 +5,12 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     public GameObject _target;
+    public GameObject[] _cameras;
 
     // Use this for initialization
     void Start()
     {
-        _target = GameObject.FindGameObjectWithTag("Camera");
+        _cameras = GameObject.FindGameObjectsWithTag("Camera");
     }
 
 
@@ -18,7 +19,23 @@ public class EnemyController : MonoBehaviour
     {
         if(_target != null)
         {
-            transform.position = Vector3.MoveTowards(transform.position, _target.transform.position, Time.deltaTime);
+            transform.LookAt(_target.transform);
+            transform.position = Vector3.MoveTowards(transform.position, _target.transform.position, Time.deltaTime/5);
+        }
+        else
+        {
+            SelectTarget();
+        }
+    }
+
+    public void SelectTarget()
+    {
+        foreach(GameObject camera in _cameras)
+        {
+            if(camera.GetComponent<CameraManager>().CameraID == camera.transform.parent.GetComponent<CameraControll>().CurrentControlledCamera)
+            {
+                _target = camera;
+            }
         }
     }
 
